@@ -16,9 +16,18 @@ public class firstScript : MonoBehaviour
     void Update()
     {
         Vector2 pos = transform.position;
-        if (pos.x >= 5 || pos.x<=-5) {
+        
+
+        //right size
+        Vector2 screenSize = new Vector2(Screen.width, Screen.height);
+        Vector2 screenSizeInWorld = new Vector2();
+        screenSizeInWorld = Camera.main.ScreenToWorldPoint(screenSize);
+
+        //left side
+        Vector2 screenZeroInWorld = Camera.main.ScreenToWorldPoint(Vector2.zero);
+        
+        if (pos.x >= screenSizeInWorld.x || pos.x <= screenZeroInWorld.x) {
             speed *= -1;
-            
         }
 
         pos.x += speed;
