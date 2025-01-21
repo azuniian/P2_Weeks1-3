@@ -29,6 +29,7 @@ public class BulletSpawner : MonoBehaviour
     {
         //constructor for a separate script
         GameObject bulletGo = Instantiate(prefab);
+
         //connect object in this script with another script
         bullet = bulletGo.GetComponent<Bullet>();
     }
