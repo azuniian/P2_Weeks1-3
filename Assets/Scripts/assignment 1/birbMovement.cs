@@ -31,7 +31,7 @@ public class birbMovement : MonoBehaviour
 
         if (speed < 1)
         {
-            speed += (float)(0.1 * (Time.deltaTime));
+            speed += (float)(0.0275 * (Time.deltaTime));
         }
 
     }
